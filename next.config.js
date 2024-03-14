@@ -1,8 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: "export",
   reactStrictMode: true,
-  basePath: "/public",
+  experimental: { appDir: true },
 };
 
-export default nextConfig;
+const withTM = require("next-transpile-modules")([]);
+
+module.exports = withTM(nextConfig);
