@@ -1,0 +1,52 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+* {
+  transition: all 0.25s ease;
+}
+
+body,
+html {
+  @apply text-slate-950 transition-all;
+}
+
+a:hover,
+a:hover svg {
+  @apply text-[#F53E32];
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+.logo svg {
+  @apply w-[2.5rem] md:w-[3.75rem] md:h-[3.75rem];
+}
+
+.section1-block2 {
+  bottom: -3.9rem;
+  right: -1.4rem;
+}
+
+.section1-block3 {
+  right: -1.3rem;
+  bottom: -0.25rem;
+  transform: rotate(-2.5deg);
+}
